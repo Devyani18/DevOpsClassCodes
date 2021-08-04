@@ -18,7 +18,7 @@ pipeline{
                     sh 'mvn pmd:pmd'
                 }
               }
-            stage('UnitTest'){
+            stage('Test'){
                 agent {label 'win_slave'}
                 steps{
                     git 'https://github.com/devops-trainer/DevOpsClassCodes.git'
