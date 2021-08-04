@@ -19,7 +19,7 @@ pipeline{
                 }
               }
             stage('Test'){
-                agent {label 'win_slave'}
+                agent {label 'ec2_slave1'}
                 steps{
                     git 'https://github.com/devops-trainer/DevOpsClassCodes.git'
                     bat 'mvn test'
